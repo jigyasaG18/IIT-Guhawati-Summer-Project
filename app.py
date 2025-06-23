@@ -16,7 +16,7 @@ scaler = joblib.load("scaler.pkl")
 # Load and cache police station data
 @st.cache_data
 def load_police_stations():
-    df = pd.read_csv("Police_Stations_India.csv")
+    df = pd.read_csv("dataset/Police_Stations_India.csv")
     df["Phone Number"] = df["Phone Number"].astype(str)  # Ensure phone numbers are strings
     return df
 
