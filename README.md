@@ -79,7 +79,7 @@ To complement the web platform, a **Power BI dashboard** was developed for NGOs,
 
 This dashboard aids stakeholders in **prioritizing resource allocation**, designing **region-specific programs**, and **monitoring progress** over time—all while ensuring ethical data handling and privacy.
 
-![domestic violence dashboard](https://github.com/user-attachments/assets/86c24631-09cb-41c8-bdf2-a8ab263263c9)
+  ![domestic violence dashboard](https://github.com/user-attachments/assets/86c24631-09cb-41c8-bdf2-a8ab263263c9)
 
 
 ## 🧠 Predictive Risk Modeling (Abstract Overview)
