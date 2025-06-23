@@ -1,6 +1,7 @@
 # 🛡️ Empower Sakhi: A Data-Driven Initiative to Prevent Domestic Violence
 
 **Mentored by:** Consulting & Analytics Club, IIT Guwahati
+
 **Duration:** May 2025 – June 2025
 
 ---
@@ -64,10 +65,6 @@ These findings not only validated the predictive potential of the dataset but al
 
 ---
 
-Here's a new section you can add to your README to highlight your Power BI dashboard:
-
----
-
 ## 📊 Power BI Dashboard – Data-Driven Decision Support
 
 To complement the web platform, a **Power BI dashboard** was developed for NGOs, researchers, and local authorities to gain real-time, actionable insights from anonymized user data and  datasets.
@@ -82,6 +79,7 @@ To complement the web platform, a **Power BI dashboard** was developed for NGOs,
 
 This dashboard aids stakeholders in **prioritizing resource allocation**, designing **region-specific programs**, and **monitoring progress** over time—all while ensuring ethical data handling and privacy.
 
+![domestic violence dashboard](https://github.com/user-attachments/assets/86c24631-09cb-41c8-bdf2-a8ab263263c9)
 
 
 ## 🧠 Predictive Risk Modeling (Abstract Overview)
