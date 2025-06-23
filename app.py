@@ -6,7 +6,7 @@ import streamlit.components.v1 as components
 import random
 
 # Set up the page configuration
-st.set_page_config(page_title="DV Risk & Support", layout="centered")
+st.set_page_config(page_title="DV Risk & Support", layout="centered", initial_sidebar_state="expanded")
 # Custom CSS to set background color to black
 
 # Load ML model and scaler
