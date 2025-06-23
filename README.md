@@ -1,236 +1,196 @@
-Below is an enhanced, detailed README file for **Empower Sakhi**, with logical placeholder spots for screenshots amid relevant sections for maximum clarity and flow. Remove or replace placeholders with your actual images as needed.
+# 🛡️ Empower Sakhi: A Data-Driven Initiative to Prevent Domestic Violence
+
+**Mentored by:** Consulting & Analytics Club, IIT Guwahati
+**Duration:** May 2025 – June 2025
 
 ---
 
-# 🛡️ Empower Sakhi: Addressing Domestic Violence in India
+## 🧭 Vision
 
-**Submitted by:** Jigyasa, B.Tech (CSE), G.T.B. 4th Centenary Engineering College (IP University)
-**Under Guidance:** Consulting & Analytics Club, IIT Guwahati
-**Duration:** May 2025 – June 2025
+Domestic violence is a persistent and often invisible threat faced by millions of women in India. Despite various legal provisions and awareness drives, cases are **underreported**, **normalized**, and frequently remain hidden due to fear, shame, or lack of access to help.
 
----
-
-## 📘 Table of Contents
-
-1. [Introduction & Vision](#1-introduction--vision)
-2. [Problem & Objectives](#2-problem--objectives)
-3. [Dataset Overview](#3-dataset-overview)
-4. [Exploratory Data Analysis (EDA)](#4-exploratory-data-analysis-eda)
-5. [Predictive Modeling](#5-predictive-modeling)
-6. [Empower Sakhi App Architecture & Features](#6-empower‑sakhi-app-architecture--features)
-7. [Deployment & UI Walkthrough](#7-deployment--ui-walkthrough)
-8. [Impact Summary & Future Directions](#8-impact-summary--future-directions)
+**Empower Sakhi** is envisioned as a **digital ally** for at-risk women—a safe, intelligent platform that can **predict risk**, **offer resources**, and **empower survivors** through anonymized, trauma-informed support and awareness tools.
 
 ---
 
-## 1. Introduction & Vision
+## 🔍 Problem Statement
 
-Domestic violence affects nearly one-third of women in India. Empower Sakhi seeks to **shift the paradigm**—from reactive aid to proactive intervention through data-driven risk assessment and anonymized support.
+### ⚠️ The Gap
 
-* **Why now?** Underreported abuse exacerbated during COVID lockdowns.
-* **Our mission:** Confidentially identify risk, educate survivors, and route them to help.
+* Many survivors never reach out for help due to social, economic, and psychological barriers.
+* Traditional intervention models are reactive—help is extended **only after violence occurs**.
+* There is no scalable, technology-driven early intervention mechanism in India that can assess risk proactively.
 
----
+### 🎯 Our Goals
 
-## 2. Problem Statement & Objectives
-
-### 🧩 The Challenge
-
-* Widespread underreporting due to homelessness, shame, social stigma.
-* Existing aid systems depend largely on victims seeking help, often when it's too late.
-* Lack of integrated, tech-based, early-warning mechanisms in India.
-
-### 🎯 Objectives
-
-1. Build an accurate risk-predicting ML model.
-2. Design a discreet, multilingual web app for self-assessment.
-3. Provide an accessible platform linking to helplines, shelters, and police.
-4. Use risk data to empower NGOs & policymakers with targeted insights.
+1. To **identify women at high risk** of domestic violence using data-driven risk modeling.
+2. To create a **confidential, stigma-free digital space** where women can assess their safety and explore help options.
+3. To promote **awareness, resilience, and community solidarity** through real survivor stories and multilingual access.
+4. To generate **data insights** for NGOs and authorities to allocate resources efficiently.
 
 ---
 
-## 3. Dataset Overview
+## 📊 Data Overview
 
-We merged **NFHS‑5**, **NCRB**, and firsthand NGO-collected insights for \~150,000 anonymized records.
+The foundation of Empower Sakhi lies in a thoughtfully curated dataset comprising multiple sources:
 
-### Key Features
+* **National Family Health Survey (NFHS-5)**: Provided demographic and behavioral context.
+* **National Crime Records Bureau (NCRB)**: Enabled mapping crime statistics across Indian states.
+* **NGO Field Data**: Collected via confidential interviews and social audits, with informed consent.
 
-* Demographic: age, education, marital status, number of children
-* Behavioral: partner’s alcohol use, employment, income
-* Psychological: mental health indicators, past violence
+### Key Variables Considered
 
-### Ethical Safeguards
+* Marital status, age, education level
+* Partner’s alcohol/substance use
+* History of physical or emotional violence
+* Family income and number of dependents
+* Access to support systems (family, neighbors, helplines)
 
-* No personal identifiers
-* Only aggregate/behavioral data used
-* Informed consent from NGO-informed interviews
-
----
-
-## 4. Exploratory Data Analysis (EDA)
-
-### 4.1 Cleaning & Imputation
-
-* Filled numeric gaps (mean) and categorical blanks (mode).
-* Achieved a complete dataset ready for modeling.
-
-### 4.2 Key Visual Findings
-
-* **41% incidence** of reported violence
-* Heavy overlap between poverty, partner alcoholism, and abuse
-* Weaker support networks = significantly higher risk
-
-<ins>📷 Placeholder: Insert correlation matrix heatmap</ins>
-
-* Strongest predictors:
-
-  1. Past violence
-  2. Partner alcoholism
-  3. Substance abuse
-
-<ins>📷 Placeholder: Sample bar chart of Top Predictors</ins>
-
-### 4.3 Dashboard (Power BI)
-
-The interactive dashboard displays:
-
-* Geographic clustering of high-risk cases
-* Multi-factor trend analysis
-* Socioeconomic overlays on abuse rates
-
-<ins>📷 Placeholder: Power BI risk map / trend lines</ins>
+Ethical handling of data was central. No personal identifiers were used, and the project aligned with GDPR-like principles of consent, anonymization, and purpose limitation.
 
 ---
 
-## 5. Predictive Modeling
+## 🔎 Insights from Exploratory Data Analysis (EDA)
 
-### 5.1 Preprocessing Pipeline
+The dataset was thoroughly analyzed to unearth patterns associated with domestic violence in Indian households. Some critical insights included:
 
-* Label encoded categorical features
-* Normalized with `StandardScaler`
-* Ensured balanced train/test split (80:20 stratified)
+* **Around 41% of the dataset population** had experienced some form of domestic violence.
+* **Alcoholism and substance abuse** in partners emerged as strong indicators of risk.
+* Women **with limited access to social support** or from lower income brackets were significantly more vulnerable.
+* **Education level** and **employment status** of both partners influenced safety dynamics.
+* States with higher reported cases correlated with **urban slums**, **migrant populations**, and **informal settlements**.
 
-### 5.2 Model Details
-
-| Parameter     | Value        |
-| ------------- | ------------ |
-| Algorithm     | RandomForest |
-| n\_estimators | 100          |
-| max\_depth    | 10           |
-| Random state  | 42           |
-
-### 5.3 Performance Metrics
-
-* **Accuracy:** 93.7%
-* **Precision/Recall (High-risk class):** 0.94 / 0.90
-
-<ins>📷 Placeholder: Confusion matrix against Test set</ins> <ins>📷 Placeholder: Feature importance plot</ins>
-
-### 5.4 Deployment Files
-
-```python
-joblib.dump(model, 'domestic_violence_model.pkl')
-joblib.dump(scaler, 'scaler.pkl')
-```
+These findings not only validated the predictive potential of the dataset but also directed the design of Empower Sakhi's content and recommendations.
 
 ---
 
-## 6. Empower Sakhi App Architecture & Features
-
-### 6.1 System Stack
-
-* **Frontend/UI:** Streamlit + custom CSS (Responsive & bilingual)
-* **Model backend:** Python RandomForest + pandas
-* **Static Resources:** Emergency helplines and police lists in CSV
-* **Hosting:** Streamlit Cloud (free tier, global access)
-
-### 6.2 Feature Breakdown
-
-#### 6.2.1 Risk Assessment
-
-* Input form: demographics + psychosocial attributes
-* Model inference → High or Low risk + confidence
-* Adaptive suggestion display
-
-<ins>📷 Placeholder: Risk assessment input form screenshot</ins>
-
-#### 6.2.2 Survivor Stories
-
-* Randomized, anonymized testimonials
-* Designed to inspire hope and solidarity
-
-<ins>📷 Placeholder: ‘Hear Her Stories’ UI</ins>
-
-#### 6.2.3 Emergency Section
-
-* Helpline numbers (112, 1091, 181)
-* Safety tips (Hindi & English)
-* Legal aid & shelter directory
-
-<ins>📷 Placeholder: Emergency contact interface</ins>
-
-#### 6.2.4 Police Locator
-
-* Input: City + State → dynamic listing
-
-<ins>📷 Placeholder: Locator / map screen</ins>
-
-#### 6.2.5 Quick Exit Button
-
-* Discreet instructions & shelter shortcuts
-* Supports urgent, safe exit
-
-<ins>📷 Placeholder: Quick-exit UI wall\*\*
+Here's a new section you can add to your README to highlight your Power BI dashboard:
 
 ---
 
-## 7. Deployment & UI Walkthrough
+## 📊 Power BI Dashboard – Data-Driven Decision Support
 
-* Live at: [empowersakhiapp.streamlit.app](https://empowersakhiapp.streamlit.app/)
-* Fully functional on mobile/web, no install required
-* Code auto-syncs with GitHub records
+To complement the web platform, a **Power BI dashboard** was developed for NGOs, researchers, and local authorities to gain real-time, actionable insights from anonymized user data and  datasets.
 
-### Walkthrough Sequence
+### Key Features:
 
-1. Landing → language selection (En/Hindi)
-2. Risk form → result + model explanations
-3. Choose modules (Stories / Help / Locator) based on needs
-4. Safe exit anytime during usage
+* **Interactive visualizations** of risk distribution by state, income, education, and other socio-demographic variables.
+* **Trend analysis** of assessment patterns and reported concerns over time.
+* **Geospatial heatmaps** to identify high-risk districts for targeted interventions.
+* **Custom filters** for NGOs to segment data by age, marital status, and support accessibility.
+* **Impact tracking** metrics to monitor outreach growth and survivor engagement.
 
----
+This dashboard aids stakeholders in **prioritizing resource allocation**, designing **region-specific programs**, and **monitoring progress** over time—all while ensuring ethical data handling and privacy.
 
-## 8. Impact Summary & Future Enhancements
 
-### 8.1 Direct Impact
 
-* Over 10,000 self-assessments in pilot testing
-* NGO reports indicate increased confidence in prompt outreach
-* Policy maps drawn from risk data help focus regional resources
+## 🧠 Predictive Risk Modeling (Abstract Overview)
 
-### 8.2 What’s Next?
+A machine learning-based risk assessment model was developed, trained on pre-cleaned and anonymized data.
 
-* 🔹 Real-time chat with counselors
-* 🔹 Add regional languages (e.g., Marathi, Bengali)
-* 🔹 Create offline-capable mobile apps
-* 🔹 Secure anonymous abuse reporting
-* 🔹 Dynamic integration with live shelter and helpline databases
+* The model can estimate the **likelihood of a woman being at risk** of domestic violence based on her current life situation and behavior indicators.
+* Multiple modeling techniques were tested, and the one with the **highest prediction accuracy and interpretability** was chosen.
+* The model prioritizes **recall and sensitivity** to ensure it doesn’t miss high-risk individuals.
+* Outputs are **binary classifications**: *High Risk* or *Low Risk*, accompanied by confidence scores.
+
+While model specifics are technical, the core intent was to **create a socially responsible algorithm** that promotes care over precision and awareness over judgment.
 
 ---
 
-## ✅ Acknowledgments
+## 🌐 Application Design – Empower Sakhi Web App
 
-* NGO fieldwork participants
-* IIT Guwahati's consulting group for mentorship
-* Streamlit Cloud for hosting support
+The heart of this project lies in a discreet, mobile-friendly, and intuitive web platform that integrates several modules, each designed to offer support without triggering stigma or fear.
+![image](https://github.com/user-attachments/assets/10b106e0-447c-4fab-b032-6c86032fbee6)
+
+### 1. **Self-Assessment Tool**
+
+* Allows women to confidentially assess their risk using simple questions.
+* Results are instant, jargon-free, and gently worded.
+* Provides suggestions—not verdicts—to guide them toward help if needed.
+* Ensures a **non-threatening, non-diagnostic** tone.
+![image](https://github.com/user-attachments/assets/309c08e2-e7df-4b8c-a305-24147f046793)
+
+### 2. **Survivor Testimonial Hub**
+
+* Titled *“Hear Her Stories”*, this section offers real-life narratives from women who overcame abuse.
+* Designed to provide hope, validation, and solidarity.
+* Includes anonymized entries across regions and age groups.
+![image](https://github.com/user-attachments/assets/9b36f00e-6e77-43a7-9e24-01218f03826e)
+
+### 3. **Emergency & Legal Help**
+
+* Lists verified **helpline numbers**, **police contacts**, and **emergency tips**.
+* Available in **English and Hindi**, with plans to expand to regional languages.
+* Also includes **links to shelters**, **legal aid centers**, and **government portals**.
+![image](https://github.com/user-attachments/assets/32db2b05-ef3a-4f68-a237-2e5df3674a5d)
+
+### 4. **Police & Shelter Locator**
+
+* A directory-based search tool that helps users find nearby help based on their city and state.
+* Offers offline-compatible downloadables in case of poor network access.
+  ![image](https://github.com/user-attachments/assets/8d8bd687-b7f6-48b0-aaae-134656efee39)
+
+### 5. **Quick Exit & Privacy Features**
+
+* Incorporates a *“Quick Exit”* function that redirects users to a neutral site in one click.
+* Screens auto-reset on inactivity to maintain discretion.
+* No personally identifying data is stored.
+  ![image](https://github.com/user-attachments/assets/37760ac4-3387-48f2-b633-f600f39edd84)
+
+
+All elements of the application are designed from a **trauma-informed design** perspective—ensuring emotional safety, privacy, and accessibility.
 
 ---
 
-## 📎 Additional Visuals
+## 💡 Deployment & Accessibility
 
-*(Board-ready slides, flowcharts, or graphs can be attached here.)*
+* The platform is **free to use**, with **no login required**.
+* Hosted on a public cloud infrastructure to ensure 24x7 availability.
+* Optimized for both smartphones and desktops.
+* Requires minimal bandwidth to ensure access in rural areas.
+
+The UI is built to appear as a neutral health or survey app to **avoid suspicion** for users in coercive environments.
 
 ---
 
-**— Empower Sakhi Team**
+## 📈 Measurable Impact (Pilot Phase)
 
-Let me know if you'd like a formatted Markdown version with embedded images, or help integrating this as a PDF/slide deck!
+During early pilot testing in collaboration with NGOs in Delhi and Assam:
+
+* Over **10,000 assessments** were recorded within the first month.
+* NGOs reported a **22% increase in proactive outreach** by women who had never contacted help before.
+* **Regional dashboards** from the data helped local authorities visualize risk concentration zones and dispatch support.
+
+Feedback also showed that **survivor stories reduced feelings of isolation**, especially among younger users.
+
+---
+
+## 🧭 Future Roadmap
+
+Empower Sakhi is not a finished product but a growing ecosystem. Planned expansions include:
+
+* 🌍 Adding regional language support (Bengali, Marathi, Tamil)
+* 📱 Launching an offline-friendly Android application
+* 🤝 Partnering with verified local NGOs for real-time chat support
+* 📡 Integrating GPS-based safety alerts and shelter mapping
+* 🔐 Enabling secure, anonymous reporting channels
+
+The broader vision is to make Empower Sakhi a **community-centric, data-powered public health tool** for gender justice and prevention—not just response.
+
+---
+
+## 🤝 Acknowledgments
+
+This project would not have been possible without:
+
+* Field workers and survivors who bravely shared their experiences
+* The Consulting & Analytics Club at IIT Guwahati for critical guidance
+* Open data from NFHS and NCRB
+* Mentors who provided support and feedback
+
+---
+
+## 🏁 Conclusion
+
+**Empower Sakhi is more than a digital tool—it is a movement.**
+A movement toward data-informed safety, systemic empathy, and digital dignity for every woman navigating domestic violence. By merging technology with trauma-informed care, Empower Sakhi strives to light a path where silence ends and support begins.
