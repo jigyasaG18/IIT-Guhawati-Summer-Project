@@ -1,6 +1,6 @@
 # 🛡️ Empower Sakhi: A Data-Driven Initiative to Prevent Domestic Violence
 
-**Mentored by:** Consulting & Analytics Club, IIT Guwahati
+**Mentored By:** Consulting & Analytics Club, IIT Guwahati
 
 **Duration:** May 2025 – June 2025
 
