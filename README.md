@@ -81,6 +81,7 @@ This dashboard aids stakeholders in **prioritizing resource allocation**, design
 
 ![domestic violence dashboard](https://github.com/user-attachments/assets/86c24631-09cb-41c8-bdf2-a8ab263263c9)
 
+---
 
 ## 🧠 Predictive Risk Modeling (Abstract Overview)
 
